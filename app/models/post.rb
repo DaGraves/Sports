@@ -17,7 +17,7 @@
 
 class Post < ApplicationRecord
   acts_as_taggable # Alias for acts_as_taggable_on :tags
-
+  is_impressionable
   extend FriendlyId
   friendly_id :title, use: :slugged
 

@@ -11,6 +11,7 @@ module Authors
     # GET /posts/1
     # GET /posts/1.json
     def show
+      impressionist(@post)
     end
 
     # GET /posts/new

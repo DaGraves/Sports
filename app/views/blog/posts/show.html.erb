@@ -14,6 +14,26 @@
       <h6 class='bio'><%= @post.author.bio %></h6>
     </div>
 
+    <div class="recent-2">
+      <% @posts.each do |post| %>
+      <div class='col-lg-6'>
+        <div class="card">
+          <%= link_to post do %>
+            <div class="card-topper" style='background-image: url(<%= post.banner_image_url %>);'></div>
+          <% end %>
+          <div class="card-block">
+            <h4 class="card-title"><%= link_to post.title, post %></h4>
+            <p class='tags'><%= raw post.tags.map { |t| link_to t.name, posts_path(tag: t.name) }.join(', ') %></p>
+            <h6 class="published-date"><%= post.display_day_published %></h6>
+            <%= link_to post do %>
+              <p class="card-text"><%= truncate(post.description, length: 50) %></p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+
     <div id="disqus_thread"></div>
     <noscript>
       Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>

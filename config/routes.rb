@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   end
 
   scope module: 'blog' do
+    get "/:tag", to: "posts#index", as: "tag"
     get 'about' => 'pages#about', as: :about
     get 'contact' => 'pages#contact', as: :contact
     get 'posts' => 'posts#index', as: :posts

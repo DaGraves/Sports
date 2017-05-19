@@ -1,60 +1,43 @@
-<div class="collapse" id="exCollapsingNavbar">
-  <div class="collapse-bg p-a-1">
-    <div class='card'>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">
-          <%= link_to 'Blog', root_path, class: "nav-link #{yield(:blog_active)}" %>
-        </li>
-        <li class="list-group-item">
-          <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
-        </li>
-        <li class="list-group-item">
-          <%= link_to 'Contact', contact_path, class: "nav-link #{yield(:contact_active)}" %>
-        </li>
-        <% if author_signed_in? %>
-          <li class="list-group-item">
-            <%= link_to 'My posts', authors_posts_path, class: "nav-link #{yield(:author)}" %>
-          </li>
-          <li class="list-group-item">
-            <%= link_to 'Logout', destroy_author_session_path, method: :delete, class: "nav-link" %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<nav class="navbar navbar-light bg-faded">
-  <div class='container'>
-    <a class='navbar-brand' href='/'>
-      Frog<span class='light'>blog</span>
-    </a>
-    <button class="navbar-toggler hidden-sm-up pull-xs-right" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
-      &#9776;
-    </button>
-    <ul class="nav navbar-nav pull-sm-right hidden-xs-down">
-      <li class="nav-item">
-        <%= link_to 'Blog', root_path, class: "nav-link #{yield(:blog_active)}" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'Contact', contact_path, class: "nav-link #{yield(:contact_active)}" %>
-      </li>
-      <% if author_signed_in? %>
-        <li class="nav-item dropdown author-nav">
-          <a class="nav-link dropdown-toggle <%= yield(:author) %>" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= image_tag(current_author.gravatar_image_url) %>
-            <%= current_author.display_name %>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <%= link_to 'My posts', authors_posts_path, class: "dropdown-item" %>
-            <%= link_to 'Account', authors_account_path, class: "dropdown-item" %>
-            <%= link_to 'Logout', destroy_author_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-      <% end %>
-    </ul>
-  </div>
+<nav class="navbar navbar-dark">
+    <div class="container">
+        <button type="button" class="navbar-toggler hidden-lg-up"
+          type="button"
+          data-toggle="collapse"
+          data-target="#nav-content">
+           &#9776;
+        </button>
+            <a class='navbar-brand' href='/'>
+              <span><%= image_tag("logo_white_background", :size => '30x30', :alt => "The Four Quarters" ) %></span>
+              <span class='light'>The</span>Four Quarters
+            </a>
+        <div class="collapse navbar-toggleable-md" id="nav-content">
+            <ul class="nav navbar-nav pull-xs-right">
+                <li class="nav-item">
+                  <%= link_to 'Blog', root_path, class: "nav-link #{yield(:blog_active)}" %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to 'NBA', tag_path("nba"), class: "nav-link #{yield(:nba_active)}" %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to 'Draft', tag_path("draft"), class: "nav-link #{yield(:draft_active)}" %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to 'Movies', tag_path("entertainment"), class: "nav-link #{yield(:draft_active)}" %>
+                </li>
+                <% if author_signed_in? %>
+                  <li class="nav-item dropdown author-nav">
+                    <a class="nav-link dropdown-toggle <%= yield(:author) %>" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <%= image_tag(current_author.gravatar_image_url) %>
+                      <%= current_author.display_name %>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <%= link_to 'My posts', authors_posts_path, class: "dropdown-item" %>
+                      <%= link_to 'Account', authors_account_path, class: "dropdown-item" %>
+                      <%= link_to 'Logout', destroy_author_session_path, method: :delete, class: "dropdown-item" %>
+                    </div>
+                  </li>
+              <% end %>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
 </nav>
