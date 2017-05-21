@@ -19,9 +19,6 @@
                   <%= link_to 'Draft', tag_path("draft"), class: "nav-link #{yield(:draft_active)}" %>
                 </li>
                 <li class="nav-item">
-                  <%= link_to 'Others', tag_path("others"), class: "nav-link #{yield(:draft_active)}" %>
-                </li>
-                <li class="nav-item">
                   <%= link_to 'Movies/Entertainment', tag_path("movies"), class: "nav-link #{yield(:draft_active)}" %>
                 </li>
                 <% if author_signed_in? %>
