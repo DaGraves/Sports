@@ -33,7 +33,7 @@ class Author < ApplicationRecord
   end
 
   def gravatar_image_url
-    "https://www.gravatar.com/avatar/#{gravatar_hash}"
+    "face.png"
   end
 
   def display_name

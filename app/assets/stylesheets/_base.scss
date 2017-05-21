@@ -1,5 +1,6 @@
 body {
   background-color: $light-gray;
+  margin: 0 !important;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -22,4 +23,12 @@ h1, h2, h3, h4, h5, h6 {
 p, p span {
   font-family: 'Merriweather', serif !important;
   font-size: 20px;
+}
+
+.container {
+  border-style: solid;
+  border-width: 1px;
+  border-top: none;
+  border-color: #cbcbcb;
+  background-color: white;
 }

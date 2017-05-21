@@ -8,13 +8,10 @@
         </button>
             <a class='navbar-brand' href='/'>
               <span><%= image_tag("logo_white_background", :size => '30x30', :alt => "The Four Quarters" ) %></span>
-              <span class='light'>The</span>Four Quarters
+              <span class='light'>TheFour Quarters</span>
             </a>
         <div class="collapse navbar-toggleable-md" id="nav-content">
             <ul class="nav navbar-nav pull-xs-right">
-                <li class="nav-item">
-                  <%= link_to 'Blog', root_path, class: "nav-link #{yield(:blog_active)}" %>
-                </li>
                 <li class="nav-item">
                   <%= link_to 'NBA', tag_path("nba"), class: "nav-link #{yield(:nba_active)}" %>
                 </li>
@@ -22,7 +19,10 @@
                   <%= link_to 'Draft', tag_path("draft"), class: "nav-link #{yield(:draft_active)}" %>
                 </li>
                 <li class="nav-item">
-                  <%= link_to 'Movies', tag_path("entertainment"), class: "nav-link #{yield(:draft_active)}" %>
+                  <%= link_to 'Others', tag_path("others"), class: "nav-link #{yield(:draft_active)}" %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to 'Movies/Entertainment', tag_path("movies"), class: "nav-link #{yield(:draft_active)}" %>
                 </li>
                 <% if author_signed_in? %>
                   <li class="nav-item dropdown author-nav">

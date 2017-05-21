@@ -1,22 +1,36 @@
 .navbar {
+    .container {
+      border-style: solid;
+      border-width: 1px;
+      border-top: none;
+      border-color: #cbcbcb;
+      background-color: white;
+      margin-top: -5px;
+      padding: 5px;
+    }
     border-radius: 0;
-    margin-bottom: 20px;
-    background-color: $primary-color;
+
     .navbar-brand {
+      font-family: 'Kumar One', cursive;
         font-weight: bolder;
-        color: $accent-color;
+        color: $primary-color;
         .light {
+
             font-weight: 300;
-            color: $primary-color-text;
+            color: $primary-color;
         }
     }
     .navbar-toggler {
         outline: none;
     }
     .nav-link {
-      color: $primary-color-light !important;
+      font-family: 'Kumar One', cursive;
+      color: $primary-color !important;
       &.active {
-        color: $primary-color-text !important;
+        color: $primary-color!important;
+      }
+      .nav-link:hover {
+        color: red;
       }
     }
     .nav-item.author-nav {
@@ -24,7 +38,7 @@
         height: 30px;
         width: 30px;
         border-radius: 50%;
-        border: 1px solid $primary-color-light;
+        border: 1px solid #595959;
       }
     }
 }
@@ -54,4 +68,11 @@
             border-bottom: none;
         }
     }
+}
+
+@media(max-width:61.9em) {
+  .navbar .navbar-brand {float:none;display:inline-block;}
+  .navbar .navbar-nav>.nav-item { float: none; margin-left: .1rem;}
+  .navbar .navbar-nav {float:none !important;}
+  .nav-item{width:100%;text-align:left;}
 }
