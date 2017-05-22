@@ -21,14 +21,20 @@
     color: #FFFFFF;
   }
 }
+.navbar-top{
+  background-color: #67BCDB;
+  .container {
+    background-color: #67BCDB;
+  }
+}
 .navbar {
   text-align: center;
     .container {
       border: none;
-      background-color: #67BCDB;
+      background-color: #a5d7ea;
     }
     border-radius: 0;
-    background-color: #67BCDB;
+    background-color: #a5d7ea;
     .navbar-toggler {
         outline: none;
     }
@@ -82,4 +88,8 @@
 @media(max-width:61.9em) {
   .navbar .navbar-nav {float:none !important;}
   .nav-item{width:100%;text-align:left;}
+}
+@media (max-width: 34em) {
+  .navbar-nav .nav-brand { font-size: 1.5rem;
+  }
 }
