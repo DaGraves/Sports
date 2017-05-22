@@ -8,13 +8,7 @@
     border-radius: 5px;
     height: 400px;
     margin-bottom: 20px;
-    background-color: #f5f5f5;
-    .card-topper {
-      height: 275px;
-      width: 100%;
-      background-size: cover;
-      background-position: center;
-    }
+    background-color: white;
     .card-block {
       padding: 10px;
       .card-title {
@@ -32,18 +26,36 @@
           font-size: 12px;
         }
       }
-      .published-date {
-        font-size: 0.8rem;
-        color: #787878;
-        font-weight: 300;
-        margin-top: 0.3rem;
-        margin-bottom: 0.3rem;
       }
       .card-text {
-        font-size: 0.9rem;
+        font-size: 1rem;
         color: black;
+        a {
+          color: black;
+          text-decoration: none;
+        }
       }
-
+      .author-bio {
+        color: #67BCDB;
+        img {
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+        }
+        h4 {
+          font-weight: bold;
+          font-size: 22px;
+        }
+        h6 {
+          font-weight: 300;
+          font-size: 16px
+        }
+        .published-date {
+          font-size: 0.8rem;
+          font-weight: 300;
+          margin-top: 0.3rem;
+          margin-bottom: 0.3rem;
+      }
     }
   }
 }
@@ -120,16 +132,10 @@
           font-size: 12px;
         }
       }
-      .published-date {
-        font-size: 0.8rem;
-        color: #787878;
-        font-weight: 300;
-        margin-top: 0.3rem;
-        margin-bottom: 0.3rem;
-      }
       .card-text {
         font-size: 0.9rem;
         color: black;
+        text-decoration: none;
       }
 
     }
@@ -137,6 +143,7 @@
   .author-bio {
     padding: 15px 45px;
     margin: 30px 0;
+    color: red;
     img {
       height: 80px;
       width: 80px;
@@ -155,24 +162,54 @@
     }
   }
 }
-
+@media (max-width: 34em) {
+  .card-topper {
+    height: 175px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  .col-lg-6 {
+    height: 450px;
+    padding-left:0;
+    padding-right:0;
+  }
+}
 @media screen and (min-width: 34em) {
   .posts.index .card {
-    width:100%;
-    height:auto;
+    .card-topper {
+      height: 275px;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+    height: 425px;
+    width: 100%;
   }
 }
 
 /* Medium. Above 48em (768px) */
 @media screen and (min-width: 48em) {
   .posts.index .card {
-    height: 420px;
+    .card-topper {
+      height: 275px;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+    height: 430px;
   }
 }
 
 /* Extra large. Above 75em (1200px) */
 @media screen and (min-width: 75em) {
   .posts.index .card {
-    height: 415px;
+    .card-topper {
+      height: 275px;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+    height: 440px;
   }
 }
