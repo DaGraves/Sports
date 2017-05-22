@@ -1,8 +1,8 @@
 <nav class="navbar-top navbar-dark">
-  <div class="container-fluid">
+  <div class="container">
   <div class="nav navbar-nav">
     <div class="nav-brand">
-    <span><%= link_to image_tag("logo_transparent_background", :size => '350x90', :alt => "The Four Quarters" ), root_url %>
+    <%=link_to ("The Four Quarters"), root_url%>
   </div>
   </div>
 </div>
@@ -21,10 +21,19 @@
                   <%= link_to 'NBA', tag_path("nba"), class: "nav-link #{yield(:nba_active)}" %>
                 </li>
                 <li class="nav-item">
-                  <%= link_to 'Draft', tag_path("draft"), class: "nav-link #{yield(:draft_active)}" %>
+                  <%= link_to 'Draft/College', tag_path("draft"), class: "nav-link #{yield(:draft_active)}" %>
                 </li>
                 <li class="nav-item">
                   <%= link_to 'Movies/Entertainment', tag_path("movies"), class: "nav-link #{yield(:draft_active)}" %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to 'NFL', tag_path("nfl"), class: "nav-link #{yield(:draft_active)}" %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to 'UFC', tag_path("movies"), class: "nav-link #{yield(:draft_active)}" %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to 'Random Stuff', tag_path("random"), class: "nav-link #{yield(:draft_active)}" %>
                 </li>
                 <% if author_signed_in? %>
                   <li class="nav-item dropdown author-nav">

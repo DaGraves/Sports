@@ -5,3 +5,14 @@
 @import "navbar";
 @import "posts";
 @import "summernote";
+@import "social-share-button";
+
+$size: 45px;
+
+.social-share-button {
+  .ssb-icon {
+    background-size: $size $size;
+    height: $size;
+    width: $size;
+  }
+}

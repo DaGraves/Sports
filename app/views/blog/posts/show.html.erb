@@ -12,6 +12,9 @@
     <%= @post.body.html_safe %>
     <hr>
     <h6><%= @post.display_day_published %></h6>
+    <div class="social-share text-xs-center">
+    <%= social_share_button_tag(@post.title) %>
+  </div>
     <div class="author-bio text-xs-center">
       <%= image_tag(@post.author.gravatar_image_url) %>
       <h4><%= @post.author.name %></h4>
@@ -27,11 +30,11 @@
           <% end %>
           <div class="card-block">
             <h4 class="card-title"><%= link_to post.title, post %></h4>
-
-            <h6 class="published-date"><%= post.display_day_published %></h6>
             <%= link_to post do %>
               <p class="card-text"><%= truncate(post.description, length: 50) %></p>
             <% end %>
+            <br>
+            <h6 class="published-date"><%= post.display_day_published %></h6>
           </div>
         </div>
       </div>

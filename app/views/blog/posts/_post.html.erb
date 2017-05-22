@@ -5,7 +5,8 @@
     <% end %>
     <div class="card-block">
       <h4 class="card-title"><%= link_to post.title, post %></h4>
-        <p class="card-text"><%= link_to truncate(post.description, length: 130) %></p>
+      <p></p>
+        <p class="card-text"><%= link_to truncate(post.description, length: 100) %></p>
         <div class="author-bio ">
         <span><%=image_tag(post.author.gravatar_image_url)%></span>  <%=post.author.name %>
         <h6 class="published-date"><%=post.display_day_published %></h6>

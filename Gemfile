@@ -37,6 +37,7 @@ gem 'bootstrap', '4.0.0.alpha3'
 gem 'summernote-rails'
 gem 'simple_form'
 gem 'impressionist'
+gem 'social-share-button'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
