@@ -12,6 +12,7 @@
     <%= @post.body.html_safe %>
     <hr>
     <h6><%= @post.display_day_published %></h6>
+    <br>
     <div class="social-share text-xs-center">
     <%= social_share_button_tag(@post.title) %>
   </div>
