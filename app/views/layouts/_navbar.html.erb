@@ -32,7 +32,9 @@
                 <li class="nav-item">
                   <%= link_to 'Movies/Entertainment', tag_path("movies"), class: "nav-link #{yield(:draft_active)}" %>
                 </li>
-
+                <li class="nav-item">
+                  <%= link_to 'Random Stuff', tag_path("random"), class: "nav-link #{yield(:draft_active)}" %>
+                </li>
                 <% if author_signed_in? %>
                   <li class="nav-item dropdown author-nav">
                     <a class="nav-link dropdown-toggle <%= yield(:author) %>" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
